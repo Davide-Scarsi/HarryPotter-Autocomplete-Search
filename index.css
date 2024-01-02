@@ -1,0 +1,74 @@
+body{
+    height: 80vh;
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+h1{
+    font-size: 1.6rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.all-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contain{
+    margin:  auto 10vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "left-aside"
+    "main"
+    "right-aside";
+    gap: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    
+    #contain{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-areas: 
+        "header header header"
+        "left-aside main right-aside"
+    }
+}
+
+header{
+    grid-area: header;
+    flex-direction: column;
+}
+
+#left-aside{
+    display: grid;
+    grid-area: left-aside;
+}
+#house-img{
+    place-self: center;
+    max-width: 100%;
+    max-height: 300px;
+
+}
+
+#right-aside{
+    grid-area: right-aside;
+    
+}
+
+header, aside, main{
+    padding: 20px;
+}
+
+main{
+    grid-area: main;
+    flex-direction: column;
+}
+#character-img{
+    max-width: 80%;
+}
