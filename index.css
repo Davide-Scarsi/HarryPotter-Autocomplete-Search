@@ -72,3 +72,8 @@ main{
 #character-img{
     max-width: 80%;
 }
+
+.ui-autocomplete {
+    overflow: auto;
+    height: 200px;
+}
